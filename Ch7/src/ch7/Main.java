@@ -4,12 +4,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//SportsCar sc = new SportsCar();
-		Car sc = new SportsCar();
-		sc.SetSpeed(3);
-		//sc.SetTurboFactor(1.1);
+//		HankookTire hTire = new HankookTire();
+//		Car sc = new Car(hTire);
+//		sc.run();
+//		KumhoTire kTire = new KumhoTire();
+//		sc.SetTire(kTire);
+//		sc.run();
 		
-		System.out.println("Speed : " + sc.speed);
-		}
-
+		Tire tire = new HankookTire();
+		NewCar sc = new NewCar(tire);
+		sc.run();
+		tire = new KumhoTire();
+		sc.SetTire(tire);
+		sc.run();
+	}
 }
